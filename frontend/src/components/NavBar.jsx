@@ -28,7 +28,7 @@ function NavBar() {
             to="/"
             className="text-2xl font-bold text-pink-600 no-underline"
           >
-            Denis Salon
+            Hair Salon
           </NavLink>
 
           {/* Desktop Links */}
