@@ -220,7 +220,7 @@ function AdminDashboard() {
           >
             {style.image && (
              <img
-  src={`https://salon-backend-autl.onrender.com/uploads/${style.image.replace(/^\/?uploads\//, "")}`}
+  src={`https://salon-backend-autl.onrender.com/uploads/${style.image)}`}
   alt={style.name}
   className="w-full h-48 object-cover"
 />
