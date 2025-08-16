@@ -113,7 +113,11 @@ function AdminDashboard() {
             value={formData.name}
             onChange={handleChange}
             required
-            style={{ backgroundColor: "#1e1e1e", color: "#fff", borderColor: "#444" }}
+            style={{
+              backgroundColor: "#1e1e1e",
+              color: "#fff",
+              borderColor: "#444",
+            }}
           />
         </div>
 
@@ -125,7 +129,11 @@ function AdminDashboard() {
             className="form-control w-full"
             value={formData.description}
             onChange={handleChange}
-            style={{ backgroundColor: "#1e1e1e", color: "#fff", borderColor: "#444" }}
+            style={{
+              backgroundColor: "#1e1e1e",
+              color: "#fff",
+              borderColor: "#444",
+            }}
           />
         </div>
 
@@ -139,7 +147,11 @@ function AdminDashboard() {
             value={formData.price}
             onChange={handleChange}
             required
-            style={{ backgroundColor: "#1e1e1e", color: "#fff", borderColor: "#444" }}
+            style={{
+              backgroundColor: "#1e1e1e",
+              color: "#fff",
+              borderColor: "#444",
+            }}
           />
         </div>
 
@@ -164,7 +176,11 @@ function AdminDashboard() {
           <button
             type="submit"
             className="btn"
-            style={{ backgroundColor: "#ff4081", color: "#fff", fontWeight: "bold" }}
+            style={{
+              backgroundColor: "#ff4081",
+              color: "#fff",
+              fontWeight: "bold",
+            }}
           >
             {editId ? "Update Style" : "Add Style"}
           </button>
@@ -175,7 +191,12 @@ function AdminDashboard() {
               className="btn btn-secondary"
               onClick={() => {
                 setEditId(null);
-                setFormData({ name: "", description: "", price: "", image: null });
+                setFormData({
+                  name: "",
+                  description: "",
+                  price: "",
+                  image: null,
+                });
                 if (fileInputRef.current) fileInputRef.current.value = null;
                 setError("");
               }}
@@ -188,7 +209,9 @@ function AdminDashboard() {
 
       <hr className="border-gray-700 mb-6" />
 
-      <h3 className="text-xl md:text-2xl text-[#ff4081] mb-4">Existing Styles</h3>
+      <h3 className="text-xl md:text-2xl text-[#ff4081] mb-4">
+        Existing Styles
+      </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {styles.map((style) => (
           <div
@@ -197,7 +220,11 @@ function AdminDashboard() {
           >
             {style.image && (
               <img
-                src={`https://salon-backend-autl.onrender.com/${style.image}`}
+                src={
+                  style.image?.startsWith("/uploads/")
+                    ? `https://salon-backend-autl.onrender.com${style.image}`
+                    : `https://salon-backend-autl.onrender.com/uploads/${style.image}`
+                }
                 alt={style.name}
                 className="w-full h-48 object-cover"
               />
