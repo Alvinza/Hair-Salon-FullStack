@@ -8,13 +8,13 @@ function Contact() {
       <p>
         Phone:{" "}
         <a href="tel:+27123456789" className="text-[#d63384] font-medium">
-          +27 123 456 789
+          +27 67 604 9312
         </a>
       </p>
       <p>
         Email:{" "}
-        <a href="mailto:info@hairsalon.com" className="text-[#d63384] font-medium">
-          info@hairsalon.com
+        <a href="mailto:alvinzondi09@gmail.com" className="text-[#d63384] font-medium">
+          alvinzondi09@gmail.com
         </a>
       </p>
 
