@@ -197,7 +197,7 @@ function AdminDashboard() {
           >
             {style.image && (
               <img
-                src={`http://localhost:5000${style.image}`}
+                src={`https://salon-backend-autl.onrender.com/${style.image}`}
                 alt={style.name}
                 className="w-full h-48 object-cover"
               />
