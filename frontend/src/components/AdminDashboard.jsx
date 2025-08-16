@@ -219,15 +219,12 @@ function AdminDashboard() {
             className="bg-[#1e1e1e] rounded-lg shadow overflow-hidden"
           >
             {style.image && (
-              <img
-                src={
-                  style.image?.startsWith("/uploads/")
-                    ? `https://salon-backend-autl.onrender.com${style.image}`
-                    : `https://salon-backend-autl.onrender.com/uploads/${style.image}`
-                }
-                alt={style.name}
-                className="w-full h-48 object-cover"
-              />
+             <img
+  src={`https://salon-backend-autl.onrender.com/uploads/${style.image.replace(/^\/?uploads\//, "")}`}
+  alt={style.name}
+  className="w-full h-48 object-cover"
+/>
+
             )}
             <div className="p-4">
               <h5 className="text-lg font-semibold">{style.name}</h5>
