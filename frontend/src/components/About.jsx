@@ -1,4 +1,5 @@
 import React from "react";
+import aboutImage from "../assets/aboutPic.png";
 
 function About() {
   return (
@@ -40,7 +41,7 @@ function About() {
       {/* Image Section */}
       <div className="flex-1">
         <img
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+          src={aboutImage}
           alt="Salon interior"
           className="w-full max-h-[400px] object-cover rounded shadow border border-[#d63384]"
         />
