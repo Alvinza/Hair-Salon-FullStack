@@ -23,7 +23,7 @@ function Booking() {
           >
             Your Name
           </label>
-          <input type="text" className="form-control" id="name" disabled />
+          <input type="text" className="form-control" id="name" />
         </div>
 
         {/* Preferred Date */}
@@ -34,7 +34,7 @@ function Booking() {
           >
             Preferred Date
           </label>
-          <input type="date" className="form-control" id="date" disabled />
+          <input type="date" className="form-control" id="date" />
         </div>
 
         {/* Preferred Time */}
@@ -45,7 +45,7 @@ function Booking() {
           >
             Preferred Time
           </label>
-          <input type="time" className="form-control" id="time" disabled />
+          <input type="time" className="form-control" id="time"/>
         </div>
 
         {/* Message */}
@@ -61,7 +61,6 @@ function Booking() {
             id="message"
             rows="4"
             placeholder="Write your message here..."
-            disabled
           ></textarea>
         </div>
 
