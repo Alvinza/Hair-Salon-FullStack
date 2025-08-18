@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-
 import Home from "./components/Home";
 import About from "./components/About";
 import Salon from "./components/Salon";
@@ -20,6 +20,7 @@ import PrivateRoute from "./components/PrivateRoute"
 function App() {
   return (
     <Router>
+      <ToastContainer />
       <NavBar />
       <div className="min-vh-75">
         <Routes>

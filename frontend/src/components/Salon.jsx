@@ -31,6 +31,7 @@ function Salon() {
       <h2 className="text-center text-[#d63384] text-3xl font-bold mb-8">
         Our Styles
       </h2>
+      {error && <p className="text-red-700">{error}</p>}
 
       {/* Styles Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

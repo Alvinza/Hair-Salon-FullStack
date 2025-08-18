@@ -4,7 +4,7 @@ function Contact() {
   return (
     <div className="bg-[#fff0f5] p-6 rounded-lg max-w-3xl mx-auto my-10">
       <h2 className="text-[#d63384] font-bold text-2xl mb-4">Contact Us</h2>
-      <p>Makhaza, Khayelitsha, Cape Town, South Africa</p>
+      <p>Claremont, Cape Town, South Africa</p>
       <p>
         Phone:{" "}
         <a href="tel:+27123456789" className="text-[#d63384] font-medium">

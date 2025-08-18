@@ -14,7 +14,7 @@ function About() {
           Our goal is to make you look and feel amazing.
         </p>
         <p className="mb-2">
-          Located in the vibrant community of Khayelitsha, we use the best
+          Located in the vibrant community of Claremont, we use the best
           products and latest trends to bring your hair dreams to life.
         </p>
         <p className="mb-2">

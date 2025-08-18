@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import API from "../api";
 import { useNavigate, Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -18,8 +19,11 @@ function Login() {
       localStorage.setItem("username", res.data.username);
       localStorage.setItem("isAdmin", res.data.isAdmin);
       navigate("/");
+      toast.success("You are logged in");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
+      setPassword("");
+      setUsername("");
     }
   };
 
