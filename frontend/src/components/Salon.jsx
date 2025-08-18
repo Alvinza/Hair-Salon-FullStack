@@ -36,7 +36,9 @@ function Salon() {
       {/* Styles Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {loading ? (
-          <p className="text-center font-bold text-2xl text-gray-400">Loading...</p>
+          <p className="text-center font-bold text-2xl text-gray-400">
+            Loading...
+          </p>
         ) : (
           <>
             {styles.map((style) => (
