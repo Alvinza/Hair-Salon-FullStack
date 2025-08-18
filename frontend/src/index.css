@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.headingFont {
+    font-family: "Playfair Display", serif
+}
