@@ -35,6 +35,10 @@ The project is deployed with **Vercel** for the frontend and **Render** for the 
 - Backend: Render  
 
 ---
+## 💡 Challenges & How I Overcame Them  
+
+One of the main challenges I faced was integrating the frontend with the backend and making sure the CRUD operations worked smoothly for the admin dashboard. I overcame this by breaking the problem into smaller steps, testing each API endpoint with Postman first, and then connecting them to React components. Deploying on two different platforms (Vercel & Render) also required careful configuration of environment variables and API routes.
+
 
 ## 📌 Installation & Setup  
 
