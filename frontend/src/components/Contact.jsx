@@ -1,19 +1,29 @@
 import React from "react";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { MdOutlinePhoneEnabled } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
+
 
 function Contact() {
   return (
     <div className="bg-[#fff0f5] p-6 rounded-lg max-w-3xl mx-auto my-10">
       <h2 className="text-[#d63384] font-bold text-2xl mb-4">Contact Us</h2>
-      <p>Claremont, Cape Town, South Africa</p>
-      <p>
-        Phone:{" "}
+      <p className="flex items-center gap-2">
+        <MdOutlineLocationOn className="text-xl"/>
+        <span>Claremont, Cape Town, South Africa</span> 
+      </p>
+      <p className="flex items-center gap-2">
+        <MdOutlinePhoneEnabled />
         <a href="tel:+27123456789" className="text-[#d63384] font-medium">
           +27 67 604 9312
         </a>
       </p>
-      <p>
-        Email:{" "}
-        <a href="mailto:alvinzondi09@gmail.com" className="text-[#d63384] font-medium">
+      <p className="flex items-center gap-2">
+        <MdOutlineEmail />
+        <a
+          href="mailto:alvinzondi09@gmail.com"
+          className="text-[#d63384] font-medium"
+        >
           alvinzondi09@gmail.com
         </a>
       </p>
