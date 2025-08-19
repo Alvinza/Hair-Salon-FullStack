@@ -42,7 +42,7 @@ One of the main challenges I faced was integrating the frontend with the backend
 Another challenge was handling user authentication and making sure that only logged-in users could access certain pages, while the admin had extra permissions. I solved this by carefully managing tokens and protecting routes in both frontend and backend.  
  
 
-Finally, designing the website to be **responsive and visually appealing** across different devices required careful CSS adjustments and testing on mobile and desktop screens. Overall, breaking problems into smaller steps and testing each part thoroughly helped me overcome these challenges.
+Finally, designing the website to be **responsive and visually appealing** across different devices required careful CSS adjustments and testing on mobile and desktop screens. Overall, breaking problems into smaller steps and testing each part thoroughly helped me overcome these challenges. Also reading documentation carefully
 
 
 
