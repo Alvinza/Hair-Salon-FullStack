@@ -40,8 +40,7 @@ The project is deployed with **Vercel** for the frontend and **Render** for the 
 One of the main challenges I faced was integrating the frontend with the backend and making sure the CRUD operations worked smoothly for the admin dashboard. I overcame this by breaking the problem into smaller steps, testing each API endpoint with Postman first, and then connecting them to React components.  
 
 Another challenge was handling user authentication and making sure that only logged-in users could access certain pages, while the admin had extra permissions. I solved this by carefully managing tokens and protecting routes in both frontend and backend.  
-
-Deploying the project on two different platforms (Vercel for frontend and Render for backend) was also tricky. I had to correctly set up environment variables, configure API paths, and make sure both ends communicated without errors.  
+ 
 
 Finally, designing the website to be **responsive and visually appealing** across different devices required careful CSS adjustments and testing on mobile and desktop screens. Overall, breaking problems into smaller steps and testing each part thoroughly helped me overcome these challenges.
 
