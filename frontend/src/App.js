@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -16,7 +16,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Testimonials from "./components/Testimonials";
 import AdminDashboard from "./components/AdminDashboard";
-import PrivateRoute from "./components/PrivateRoute"
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function App() {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-           {/* Admin dashboard - admin only */}
+          {/* Admin dashboard - admin only */}
           <Route
             path="/admin"
             element={

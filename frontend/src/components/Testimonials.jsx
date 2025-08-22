@@ -91,8 +91,9 @@ const Testimonials = () => {
             <div className="flex flex-col items-center text-center">
               <img
                 src={testimonial.image}
-                alt={`${testimonial.name} profile`} // Improved accessibility
+                alt={`${testimonial.name} profile`} 
                 className="w-16 h-16 rounded-full object-cover mb-4"
+                loading="lazy"
               />
 
               <h5 className="font-semibold text-gray-800 mb-2 testimonialName">

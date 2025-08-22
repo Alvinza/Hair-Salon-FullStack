@@ -45,7 +45,7 @@ function Booking() {
           >
             Preferred Time
           </label>
-          <input type="time" className="form-control" id="time"/>
+          <input type="time" className="form-control" id="time" />
         </div>
 
         {/* Message */}
