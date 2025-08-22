@@ -14,6 +14,7 @@ import Contact from "./components/Contact";
 import Booking from "./components/Booking";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Testimonials from "./components/Testimonials";
 import AdminDashboard from "./components/AdminDashboard";
 import PrivateRoute from "./components/PrivateRoute"
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/salon" element={<Salon />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           {/* Booking page - only logged-in users */}
           <Route
             path="/booking"

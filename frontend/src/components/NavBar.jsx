@@ -74,6 +74,14 @@ function NavBar() {
             >
               Contact
             </NavLink>
+            <NavLink
+              to="/testimonials"
+              className={({ isActive }) =>
+                `${linkClasses} ${isActive ? activeLinkClasses : ""}`
+              }
+            >
+              Testimonials
+            </NavLink>
           </div>
 
           {/* User Links */}
