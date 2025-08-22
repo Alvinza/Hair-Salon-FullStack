@@ -39,7 +39,9 @@ function Login() {
         <form onSubmit={handleSubmit}>
           {/* Username */}
           <div className="mb-3">
-            <label className="form-label text-gray-700 font-medium">Username</label>
+            <label className="form-label text-gray-700 font-medium">
+              Username
+            </label>
             <input
               className="form-control"
               value={username}
@@ -51,7 +53,9 @@ function Login() {
 
           {/* Password */}
           <div className="mb-3">
-            <label className="form-label text-gray-700 font-medium">Password</label>
+            <label className="form-label text-gray-700 font-medium">
+              Password
+            </label>
             <input
               type="password"
               className="form-control"
@@ -66,7 +70,11 @@ function Login() {
           <button
             type="submit"
             className="btn btn-secondary w-full"
-            style={{ backgroundColor: "#d63384", color: "#fff", fontWeight: "bold" }}
+            style={{
+              backgroundColor: "#d63384",
+              color: "#fff",
+              fontWeight: "bold",
+            }}
           >
             Login
           </button>

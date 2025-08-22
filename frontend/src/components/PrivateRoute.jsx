@@ -7,12 +7,13 @@ function PrivateRoute({ children, adminOnly = false }) {
   const isAdmin = localStorage.getItem("isAdmin") === "true";
 
   if (!token) {
-  if (!toast.isActive("login-error")) {
-    toast.error('You have to log in to book your hair appointment.', { toastId: "login-error" });
+    if (!toast.isActive("login-error")) {
+      toast.error("You have to log in to book your hair appointment.", {
+        toastId: "login-error",
+      });
+    }
+    return <Navigate to="/login" replace />;
   }
-  return <Navigate to="/login" replace />;
-}
-
 
   if (adminOnly && !isAdmin) {
     // Not admin, redirect home or anywhere you want
