@@ -1,11 +1,12 @@
 import React from "react";
+import homeImage from "../assets/homeImage.png"
 
 function Home() {
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <img
-        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1600&q=80"
+        src={homeImage}
         alt="Salon"
         className="w-full h-full object-cover brightness-50"
       />
