@@ -2,24 +2,28 @@ import React, { useEffect, useState, useRef } from "react";
 import API from "../api";
 
 function AdminDashboard() {
-  const [styles, setStyles] = useState([]);
+   // State to store styles hairstyles
+  const [styles, setStyles] = useState([]); 
+
+  // State for form data (add/edit style)
   const [formData, setFormData] = useState({
     name: "",
     description: "",
     price: "",
     image: null,
   });
-  const [editId, setEditId] = useState(null);
+  const [editId, setEditId] = useState(null); // Track style being edited
   const [error, setError] = useState("");
   const fileInputRef = useRef();
 
-  // Fetch styles
+  // Fetch styles from API
   const fetchStyles = () => {
     API.get("/styles")
       .then((res) => setStyles(res.data))
       .catch((err) => setError("Failed to load styles"));
   };
 
+  // Load all styles when page loads 
   useEffect(() => {
     fetchStyles();
   }, []);
@@ -51,16 +55,19 @@ function AdminDashboard() {
       data.append("price", formData.price);
       if (formData.image) data.append("image", formData.image);
 
+      // Update existing style
       if (editId) {
         await API.put(`/styles/${editId}`, data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       } else {
+        // Add new style
         await API.post("/styles", data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       }
 
+      // Reset form after submit
       setFormData({ name: "", description: "", price: "", image: null });
       if (fileInputRef.current) fileInputRef.current.value = null;
       setEditId(null);
@@ -102,6 +109,7 @@ function AdminDashboard() {
 
       {error && <div className="alert alert-danger mb-4">{error}</div>}
 
+      {/* Form to add/edit styles */}
       <form onSubmit={handleSubmit} className="mb-6 space-y-4">
         {/* Name */}
         <div className="mb-3">
