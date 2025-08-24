@@ -8,16 +8,21 @@ function Contact() {
   return (
     <div className="bg-[#fff0f5] p-6 rounded-lg max-w-3xl mx-auto my-10">
       <h2 className="text-[#d63384] font-bold text-2xl mb-4">Contact Us</h2>
+      {/* Location */}
       <p className="flex items-center gap-2">
         <MdOutlineLocationOn className="text-xl"/>
         <span>Claremont, Cape Town, South Africa</span> 
       </p>
+      
+       {/* Phone */}
       <p className="flex items-center gap-2">
         <MdOutlinePhoneEnabled />
         <a href="tel:+27123456789" className="text-[#d63384] font-medium">
           +27 67 604 9312
         </a>
       </p>
+
+      {/* Email */}
       <p className="flex items-center gap-2">
         <MdOutlineEmail />
         <a
@@ -28,6 +33,7 @@ function Contact() {
         </a>
       </p>
 
+      {/* Google Maps embed */}
       <div className="mt-6">
         <iframe
           title="salon-location"
