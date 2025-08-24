@@ -1,19 +1,23 @@
+// Lets new users create an account (default: non-admin)
 import React, { useState } from "react";
 import API from "../api";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function Register() {
+  // Local state for form inputs and error handling
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  // Handle registration form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
     try {
+       // Send register request (default user, not admin)
       await API.post("/auth/register", { username, password, isAdmin: false });
       toast.success("Registration successfully");
       navigate("/login");
@@ -31,6 +35,7 @@ function Register() {
 
         {error && <div className="alert alert-danger">{error}</div>}
 
+        {/* Registration form */}
         <form onSubmit={handleSubmit}>
           {/* Username */}
           <div className="mb-3">
