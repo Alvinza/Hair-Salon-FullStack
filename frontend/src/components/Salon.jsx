@@ -1,11 +1,13 @@
+// Fetches hairstyles from API and displays them in a grid
 import React, { useEffect, useState } from "react";
 import API from "../api";
 
 function Salon() {
-  const [styles, setStyles] = useState([]);
+  const [styles, setStyles] = useState([]); // State to store styles
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Fetch salon styles from backend API
   useEffect(() => {
     const fetchStyles = async () => {
       try {
@@ -27,7 +29,6 @@ function Salon() {
 
   return (
     <div className="bg-[#fff0f6] px-4 py-10">
-      {/* Title */}
       <h2 className="text-center text-[#d63384] text-3xl font-bold mb-8">
         Our Styles
       </h2>
@@ -41,6 +42,7 @@ function Salon() {
           </p>
         ) : (
           <>
+            {/* Loop through styles and render each */}
             {styles.map((style) => (
               <div
                 key={style._id}
