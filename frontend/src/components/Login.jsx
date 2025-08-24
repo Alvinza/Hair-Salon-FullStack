@@ -1,20 +1,26 @@
+// Allows users to sign in and stores token + user info in localStorage
 import React, { useState } from "react";
 import API from "../api";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function Login() {
+  // Local state for form inputs and error handling
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  // Handle login form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
     try {
+       // Send login request
       const res = await API.post("/auth/login", { username, password });
+
+      // Save token + user info in localStorage
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("username", res.data.username);
       localStorage.setItem("isAdmin", res.data.isAdmin);
@@ -36,6 +42,7 @@ function Login() {
 
         {error && <div className="alert alert-danger">{error}</div>}
 
+        {/* Login form */}
         <form onSubmit={handleSubmit}>
           {/* Username */}
           <div className="mb-3">
