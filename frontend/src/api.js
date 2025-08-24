@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Axios instance for API calls
+// Connects frontend to backend API and attaches token to requests
 // Base URL points to my backend hosted on Render
 const API = axios.create({
   baseURL: "https://salon-backend-autl.onrender.com/api",
