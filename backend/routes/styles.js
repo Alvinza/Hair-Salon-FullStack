@@ -1,6 +1,7 @@
+// Routes for managing salon styles (CRUD)
 const express = require("express");
 const router = express.Router();
-const multer = require("multer");
+const multer = require("multer"); // For image upload
 const path = require("path");
 const authMiddleware = require("../middleware/authMiddleware");
 const Style = require("../models/Style");
