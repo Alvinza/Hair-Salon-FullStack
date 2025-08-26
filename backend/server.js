@@ -1,22 +1,25 @@
+// Main entry point for the backend server
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 
-dotenv.config();
+dotenv.config(); // Load environment variables
 
+// Import route files
 const authRoutes = require("./routes/auth");
 const styleRoutes = require("./routes/styles");
 
 const app = express();
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 app.use("/uploads", express.static("uploads")); // serve uploaded images
 
-// Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/styles", styleRoutes);
+// API routes
+app.use("/api/auth", authRoutes); // Authentication (register/login)
+app.use("/api/styles", styleRoutes); // Salon styles (CRUD)
 app.get("/", function (req, res) {
     res.send("Hello There❤️❤️")
 })
