@@ -1,3 +1,4 @@
+// Style model - represents salon hairstyles/services
 const mongoose = require("mongoose");
 
 const StyleSchema = new mongoose.Schema({
