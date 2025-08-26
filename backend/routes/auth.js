@@ -1,6 +1,7 @@
+// Authentication routes - register and login users
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcryptjs"); // For password hashing
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
@@ -14,6 +15,7 @@ router.post("/register", async (req, res) => {
     const existingUser = await User.findOne({ username });
     if (existingUser) return res.status(400).json({ message: "User exists" });
 
+    // Hash password before saving
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = new User({ username, password: hashedPassword, isAdmin });
@@ -30,18 +32,22 @@ router.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
 
+    // Check if user already exists
     const user = await User.findOne({ username });
     if (!user) return res.status(400).json({ message: "Invalid credentials" });
 
+    // Compare passwords
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
 
+    // Create JWT token
     const token = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin },
       JWT_SECRET,
       { expiresIn: "1d" }
     );
 
+    // send response
     res.json({ token, username: user.username, isAdmin: user.isAdmin });
   } catch (err) {
     res.status(500).json({ message: "Server error" });
