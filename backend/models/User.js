@@ -1,3 +1,4 @@
+// User model - represents registered users (admin & normal)
 const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
