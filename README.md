@@ -5,7 +5,9 @@ The project is deployed with **Vercel** for the frontend and **Render** for the 
 
 ## 🌐 Live Demo  
 - **Frontend (Vercel):** [https://hair-salon-snowy.vercel.app/]  
-- **Backend (Render):** [https://salon-backend-autl.onrender.com]  
+- **Backend (Render):** [https://salon-backend-autl.onrender.com]
+## screenshot📸
+![Project Screenshot](frontend/src/assets/pic.png)
 
 ---
 
