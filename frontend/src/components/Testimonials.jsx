@@ -37,7 +37,7 @@ const Testimonials = () => {
     },
     {
       id: 4,
-      name: "Ayanda",
+      name: "Alicia",
       text: "Incredible transformation! The team here really knows what they're doing. Highly recommend!",
       rating: 4,
       image: user4,
