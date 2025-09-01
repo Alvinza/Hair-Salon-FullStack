@@ -21,7 +21,7 @@ import PrivateRoute from "./components/PrivateRoute";
 function App() {
   return (
     <Router>
-      <ToastContainer /> // Notificationss
+      <ToastContainer /> 
       <NavBar />
       <div className="min-vh-75">
         <Routes>
