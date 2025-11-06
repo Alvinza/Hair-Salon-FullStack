@@ -9,13 +9,14 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   // Handle login form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
+    setLoading(true);
     try {
        // Send login request
       const res = await API.post("/auth/login", { username, password });
@@ -30,6 +31,9 @@ function Login() {
       setError(err.response?.data?.message || "Login failed");
       setPassword("");
       setUsername("");
+    }
+    finally {
+      setLoading(false); // ✅ stop loading in all cases
     }
   };
 
@@ -55,6 +59,7 @@ function Login() {
               onChange={(e) => setUsername(e.target.value)}
               required
               placeholder="Enter your username"
+              disabled={loading}
             />
           </div>
 
@@ -70,6 +75,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
               required
               placeholder="Enter your password"
+              disabled={loading}
             />
           </div>
 
@@ -77,13 +83,14 @@ function Login() {
           <button
             type="submit"
             className="btn btn-secondary w-full"
+            disabled={loading}
             style={{
               backgroundColor: "#d63384",
               color: "#fff",
               fontWeight: "bold",
             }}
           >
-            Login
+            {loading ? "Loading..." : "Login"}
           </button>
         </form>
 

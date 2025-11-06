@@ -1,6 +1,8 @@
 // Fetches hairstyles from API and displays them in a grid
 import React, { useEffect, useState } from "react";
 import API from "../api";
+import { Spinner } from "react-bootstrap";
+
 
 function Salon() {
   const [styles, setStyles] = useState([]); // State to store styles
@@ -37,9 +39,12 @@ function Salon() {
       {/* Styles Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {loading ? (
-          <p className="text-center font-bold text-xl text-gray-600">
-            Please wait a moment… your style inspiration is on its way.
-          </p>
+           <div className="flex flex-col items-center justify-center w-full py-10">
+              <Spinner animation="border" variant="dark" role="status" />
+              <p className="mt-4 font-semibold text-gray-600 text-lg text-center">
+                  Please wait a moment… your style inspiration is on its way.
+              </p>
+          </div>
         ) : (
           <>
             {/* Loop through styles and render each */}
