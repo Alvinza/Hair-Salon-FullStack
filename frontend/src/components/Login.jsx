@@ -16,7 +16,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
+    setLoading(true);
     try {
        // Send login request
       const res = await API.post("/auth/login", { username, password });
@@ -31,7 +31,9 @@ function Login() {
       setError(err.response?.data?.message || "Login failed");
       setPassword("");
       setUsername("");
-      setLoading(false);
+    }
+    finally {
+      setLoading(false); // ✅ stop loading in all cases
     }
   };
 
