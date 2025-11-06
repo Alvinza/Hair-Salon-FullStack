@@ -9,13 +9,14 @@ function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   // Handle registration form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
+    setLoading(true);
     try {
        // Send register request (default user, not admin)
       await API.post("/auth/register", { username, password, isAdmin: false });
@@ -23,6 +24,9 @@ function Register() {
       navigate("/login");
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed");
+    }
+    finally {
+      setLoading(false);
     }
   };
 
@@ -48,6 +52,7 @@ function Register() {
               onChange={(e) => setUsername(e.target.value)}
               required
               placeholder="Enter your username"
+              disabled={loading}
             />
           </div>
 
@@ -63,12 +68,14 @@ function Register() {
               onChange={(e) => setPassword(e.target.value)}
               required
               placeholder="Enter your password"
+              disabled={loading}
             />
           </div>
 
           {/* Button */}
           <button
             type="submit"
+            disabled={loading}
             className="btn btn-secondary w-full"
             style={{
               backgroundColor: "#d63384",
@@ -76,7 +83,7 @@ function Register() {
               fontWeight: "bold",
             }}
           >
-            Register
+            {loading ? "Loading..." : "Register"}
           </button>
         </form>
 
