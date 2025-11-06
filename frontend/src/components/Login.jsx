@@ -59,6 +59,7 @@ function Login() {
               onChange={(e) => setUsername(e.target.value)}
               required
               placeholder="Enter your username"
+              disabled={loading}
             />
           </div>
 
@@ -74,6 +75,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
               required
               placeholder="Enter your password"
+              disabled={loading}
             />
           </div>
 
@@ -81,6 +83,7 @@ function Login() {
           <button
             type="submit"
             className="btn btn-secondary w-full"
+            disabled={loading}
             style={{
               backgroundColor: "#d63384",
               color: "#fff",
