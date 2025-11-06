@@ -1,7 +1,8 @@
 // Fetches hairstyles from API and displays them in a grid
 import React, { useEffect, useState } from "react";
 import API from "../api";
-import Spinner from 'react-bootstrap/Spinner';
+import { Spinner } from "react-bootstrap";
+
 
 function Salon() {
   const [styles, setStyles] = useState([]); // State to store styles
