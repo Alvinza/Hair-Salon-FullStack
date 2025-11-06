@@ -9,6 +9,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   // Handle login form submission
@@ -30,6 +31,7 @@ function Login() {
       setError(err.response?.data?.message || "Login failed");
       setPassword("");
       setUsername("");
+      setLoading(false);
     }
   };
 
@@ -83,7 +85,7 @@ function Login() {
               fontWeight: "bold",
             }}
           >
-            Login
+            {loading ? "Loading..." : "Login"}
           </button>
         </form>
 
