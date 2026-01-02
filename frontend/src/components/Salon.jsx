@@ -16,13 +16,13 @@ function Salon() {
         setLoading(true);
         setError(null);
 
-        const res = await API.get("/styles"); // ✅ async call
+        const res = await API.get("/styles"); 
         setStyles(res.data);
       } catch (err) {
         console.error(err);
         setError("Failed to load styles. Please try again.");
       } finally {
-        setLoading(false); // ✅ always run after try/catch
+        setLoading(false); 
       }
     };
 
