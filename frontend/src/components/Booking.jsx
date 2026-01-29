@@ -2,13 +2,13 @@ import React from "react";
 
 function Booking() {
   return (
-    <div className="bg-[#fff0f5] p-5 rounded-lg max-w-2xl mx-auto mt-4">
+    <div className="bg-gradient-to-br from-[#fff0f5] to-[#fce4ec] rounded-xl mt-6 shadow-lg">
       {/* Title */}
       <div className="text-center mb-6">
-        <h2 className="text-[#d63384] font-bold text-2xl">
+        <h2 className="text-[#d63384] font-bold text-3xl ">
           Book Your Appointment
         </h2>
-        <p className="text-gray-600">
+        <p className="text-gray-600 ">
           Booking functionality will be added soon.
         </p>
       </div>
