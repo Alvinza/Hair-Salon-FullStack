@@ -8,13 +8,13 @@ function Booking() {
         <h2 className="text-[#d63384] font-bold text-3xl ">
           Book Your Appointment
         </h2>
-        <p className="text-gray-600 ">
+        <p className="text-gray-600 italic">
           Booking functionality will be added soon.
         </p>
       </div>
 
       {/* Form */}
-      <form className="bg-white p-5 rounded-lg shadow-md">
+      <form className="bg-white p-5 rounded-lg shadow-md border border-[#f8bbd9]">
         {/* Name */}
         <div className="mb-4">
           <label
