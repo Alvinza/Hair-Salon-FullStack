@@ -68,9 +68,9 @@ function Salon() {
                   <p className="text-gray-700 text-sm mb-3 flex-1">
                     {style.description}
                   </p>
-                  <p className="text-[#880e4f] font-bold text-lg mt-auto">
-                    R{style.price}
-                  </p>
+                 <p className="text-[#880e4f] font-bold text-lg mt-auto">
+                    R{Number(style.price).toFixed(2)}
+                 </p>
                 </div>
               </div>
             ))}
