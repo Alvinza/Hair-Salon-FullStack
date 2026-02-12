@@ -37,7 +37,7 @@ function Salon() {
       {error && <p className="text-red-700">{error}</p>}
 
       {/* Styles Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 min-h-[400px]">
         {loading ? (
            <div className="flex flex-col items-center justify-center w-full py-10">
               <Spinner animation="border" variant="dark" role="status" />
@@ -56,7 +56,7 @@ function Salon() {
                 {/* Image */}
                 <img
                   src={`https://salon-backend-autl.onrender.com${style.image}`}
-                  alt={style.name}
+                  alt={style.name || "Salon hairstyle"}
                   className="w-full h-64 object-cover"
                 />
 
