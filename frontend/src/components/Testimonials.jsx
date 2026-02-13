@@ -79,7 +79,7 @@ const Testimonials = () => {
         {/* Map through testimonials data for dynamic rendering */}
         {testimonials.map((testimonial) => (
           <div
-            key={testimonial.id} // Unique key for React optimization
+            key={testimonial.id} 
             className="bg-white rounded-lg shadow-lg p-6"
             style={{
               borderWidth: "2px",
@@ -91,7 +91,7 @@ const Testimonials = () => {
             <div className="flex flex-col items-center text-center">
               <img
                 src={testimonial.image}
-                alt={`${testimonial.name} profile`} 
+                alt={`${testimonial.name} profile pic`} 
                 className="w-16 h-16 rounded-full object-cover mb-4"
                 loading="lazy"
               />
@@ -103,7 +103,7 @@ const Testimonials = () => {
               {/* Star rating component */}
               <StarRating rating={testimonial.rating} />
 
-              <p className="text-gray-600 text-sm mt-4 leading-relaxed">
+              <p className="text-gray-600 text-sm mt-4 leading-relaxed text-muted">
                 {testimonial.text}
               </p>
             </div>
